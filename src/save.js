@@ -20,11 +20,16 @@ import ScrollTopIcon from './scroll-top-icon';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+export default function save( { attributes } ) {
 	const blockProps = useBlockProps.save();
 
 	return (
-		<button { ...blockProps }>
+		<button
+			{ ...blockProps }
+			{ ...attributes }
+			type="button"
+			onClick="hcoScroll"
+		>
 			<ScrollTopIcon { ...blockProps.style } />
 		</button>
 	);

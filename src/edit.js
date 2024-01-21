@@ -32,6 +32,14 @@ import { PanelBody, RadioControl, TextControl } from '@wordpress/components';
 import { useEffect } from '@wordpress/element';
 
 /**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './editor.scss';
+
+/**
  * Internal dependencies
  */
 import ScrollTopIcon from './scroll-top-icon';
@@ -49,10 +57,10 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { scrollTo, elementId } = attributes;
 
 	useEffect( () => {
-		if (scrollTo === 'top' && elementId !== '') {
-			setAttributes({ elementId : '' });
+		if ( scrollTo === 'top' && elementId !== '' ) {
+			setAttributes( { elementId: '' } );
 		}
-	}, [ scrollTo ] );
+	}, [ scrollTo, elementId ] );
 
 	return (
 		<>
@@ -60,7 +68,10 @@ export default function Edit( { attributes, setAttributes } ) {
 				<PanelBody title={ __( 'Settings', 'scroll-to' ) }>
 					<RadioControl
 						label={ __( 'Scroll Target', 'scroll-to' ) }
-						help={ __( 'Choose to scroll either to a specific HTML element or to the top of the page.', 'scroll-to' ) }
+						help={ __(
+							'Choose to scroll either to a specific HTML element or to the top of the page.',
+							'scroll-to'
+						) }
 						selected={ scrollTo }
 						options={ [
 							{ label: __( 'Top', 'scroll-to' ), value: 'top' },
