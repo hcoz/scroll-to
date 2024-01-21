@@ -20,6 +20,32 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log( 'Hello World! (from create-block-scroll-to block)' );
-/* eslint-enable no-console */
+import domReady from '@wordpress/dom-ready';
+
+domReady( function () {
+	const scrollButton = document.getElementById( 'hco-scroll-btn' );
+
+	document.addEventListener( 'scroll', () => {
+		const docEl = document.documentElement;
+		const scrollableHeight = docEl.scrollHeight - docEl.clientHeight;
+		const GOLDEN_RATIO = 0.5;
+
+		scrollButton.style.display =
+			docEl.scrollTop / scrollableHeight > GOLDEN_RATIO
+				? 'block'
+				: 'none';
+	} );
+
+	scrollButton.addEventListener( 'click', () => {
+		if ( scrollButton.getAttribute( 'scrollto' ) === 'top' ) {
+			window.scrollTo( {
+				top: 0,
+				behavior: 'smooth',
+			} );
+		} else {
+			document
+				.querySelector( scrollButton.getAttribute( 'elementid' ) )
+				.scrollIntoView( { behavior: 'smooth' } );
+		}
+	} );
+} );

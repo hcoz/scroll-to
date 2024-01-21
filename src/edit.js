@@ -86,7 +86,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					{ scrollTo === 'element' && (
 						<TextControl
-							label={ __( 'Target Element ID', 'scroll-to' ) }
+							label={ __( 'Target Element', 'scroll-to' ) }
+							help={ __(
+								'Add the CSS selector of the target element to be scrolled into.',
+								'scroll-to'
+							) }
 							value={ elementId }
 							onChange={ ( value ) =>
 								setAttributes( { elementId: value } )

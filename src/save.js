@@ -28,7 +28,7 @@ export default function save( { attributes } ) {
 			{ ...blockProps }
 			{ ...attributes }
 			type="button"
-			onClick="hcoScroll"
+			id="hco-scroll-btn"
 		>
 			<ScrollTopIcon { ...blockProps.style } />
 		</button>

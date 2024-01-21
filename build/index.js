@@ -112,7 +112,8 @@ function Edit({
       scrollTo: value
     })
   }), scrollTo === 'element' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Target Element ID', 'scroll-to'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Target Element', 'scroll-to'),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add the CSS selector of the target element to be scrolled into.', 'scroll-to'),
     value: elementId,
     onChange: value => setAttributes({
       elementId: value
@@ -229,7 +230,7 @@ function save({
     ...blockProps,
     ...attributes,
     type: "button",
-    onClick: "hcoScroll"
+    id: "hco-scroll-btn"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_scroll_top_icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
     ...blockProps.style
   }));

@@ -9,11 +9,13 @@
  */
 .wp-block-create-block-scroll-to {
   display: none;
+  cursor: pointer;
   background-color: #eee;
   padding: 2px;
   position: fixed !important;
   bottom: 25px;
   right: 25px;
+  z-index: 1000;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
