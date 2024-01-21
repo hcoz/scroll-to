@@ -22,6 +22,11 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 /**
+ * Internal dependencies
+ */
+import ScrollTopIcon from './scroll-top-icon';
+
+/**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
@@ -30,9 +35,11 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit() {
+	const blockProps = useBlockProps();
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Scroll To – hello from the editor!', 'scroll-to' ) }
-		</p>
+		<button { ...blockProps }>
+			<ScrollTopIcon { ...blockProps.style } />
+		</button>
 	);
 }

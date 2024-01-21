@@ -8,9 +8,11 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-scroll-to {
-  background-color: #21759b;
-  color: #fff;
+  background-color: #eee;
   padding: 2px;
+  position: fixed !important;
+  bottom: 25px;
+  right: 25px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

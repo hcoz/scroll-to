@@ -5,11 +5,23 @@
 	"version": "0.1.0",
 	"title": "Scroll To",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Gutenberg block of scroll to top or a specific HTML element.",
 	"example": {},
+	"attributes": {
+		"scrollTo": {
+			"type": "string",
+			"enum": ["top", "element"]
+		},
+		"elementId": {
+			"type": "string"
+		}
+	},
 	"supports": {
-		"html": false
+		"color": {
+			"background": true
+		},
+		"html": false,
+		"multiple": false
 	},
 	"textdomain": "scroll-to",
 	"editorScript": "file:./index.js",

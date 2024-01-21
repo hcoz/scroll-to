@@ -19,6 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _scroll_top_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scroll-top-icon */ "./src/scroll-top-icon.js");
 
 /**
  * Retrieves the translation of text.
@@ -44,6 +45,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
+ * Internal dependencies
+ */
+
+
+/**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
@@ -52,9 +58,12 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function Edit() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Scroll To – hello from the editor!', 'scroll-to'));
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    ...blockProps
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_scroll_top_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    ...blockProps.style
+  }));
 }
 
 /***/ }),
@@ -72,6 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/save.js");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/block.json");
+/* harmony import */ var _scroll_top_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scroll-top-icon */ "./src/scroll-top-icon.js");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -95,12 +105,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Every block starts by registering a new block type definition.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+  icon: _scroll_top_icon__WEBPACK_IMPORTED_MODULE_5__["default"],
   /**
    * @see ./edit.js
    */
@@ -150,6 +162,42 @@ function save() {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, 'Scroll To – hello from the saved content!');
 }
+
+/***/ }),
+
+/***/ "./src/scroll-top-icon.js":
+/*!********************************!*\
+  !*** ./src/scroll-top-icon.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const SvgComponent = ({
+  width = 48,
+  height = 48,
+  color
+}) => {
+  let pathProps = {};
+  if (color) {
+    pathProps.fill = color;
+  }
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: width,
+    height: height,
+    viewBox: "0 0 512 512"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    ...pathProps,
+    d: "M247.5 137.3c-2.2.8-5.6 2.2-7.5 3.1-1.9 1-44.3 42.6-94.1 92.5-72.8 72.7-91.1 91.6-93 95.6-2 4.1-2.4 6.6-2.4 14 0 7.8.4 9.7 2.7 14 5.6 10.6 14.9 16.6 26.8 17.3 6 .3 8.7 0 13.5-1.8 5.8-2.2 9-5.2 84.3-80.4l78.2-78.1 78.3 78.2c88 88 83.1 83.8 97.7 83.8 18.1 0 31.5-13.4 31.5-31.5 0-14.8 5.7-8.2-96.8-110.7-81.8-81.8-91.8-91.5-97.1-93.9-6.9-3.1-16.2-4-22.1-2.1z"
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgComponent);
 
 /***/ }),
 
@@ -223,7 +271,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/scroll-to","version":"0.1.0","title":"Scroll To","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"scroll-to","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/scroll-to","version":"0.1.0","title":"Scroll To","category":"widgets","description":"Gutenberg block of scroll to top or a specific HTML element.","example":{},"attributes":{"scrollTo":{"type":"string","enum":["top","element"]},"elementId":{"type":"string"}},"supports":{"color":{"background":true},"html":false,"multiple":false},"textdomain":"scroll-to","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
