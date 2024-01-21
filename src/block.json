@@ -10,7 +10,7 @@
 	"attributes": {
 		"scrollTo": {
 			"type": "string",
-			"enum": ["top", "element"]
+			"enum": [ "top", "element" ]
 		},
 		"elementId": {
 			"type": "string"

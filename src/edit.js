@@ -26,7 +26,7 @@ import { PanelBody, RadioControl, TextControl } from '@wordpress/components';
 
 /**
  * Import neecessary React utilities
- * 
+ *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-element/#useeffect
  */
 import { useEffect } from '@wordpress/element';
@@ -44,36 +44,44 @@ import ScrollTopIcon from './scroll-top-icon';
  *
  * @return {Element} Element to render.
  */
-export default function Edit({ attributes, setAttributes }) {
+export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
 	const { scrollTo, elementId } = attributes;
 
-	useEffect(() => {
-		setAttributes({
+	useEffect( () => {
+		setAttributes( {
 			scrollTo: scrollTo || 'top',
-			elementId: elementId || ''
-		});
-	}, [scrollTo, elementId]);
+			elementId: elementId || '',
+		} );
+	}, [ scrollTo, elementId ] );
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Settings', 'scroll-to')}>
+				<PanelBody title={ __( 'Settings', 'scroll-to' ) }>
 					<RadioControl
-						label={__('Scroll Target', 'scroll-to')}
-						selected={scrollTo}
-						options={[
-							{ label: __('Top', 'scroll-to'), value: 'top' },
-							{ label: __('Element', 'scroll-to'), value: 'element' },
-						]}
-						onChange={(value) => setAttributes({ scrollTo: value })}
+						label={ __( 'Scroll Target', 'scroll-to' ) }
+						selected={ scrollTo }
+						options={ [
+							{ label: __( 'Top', 'scroll-to' ), value: 'top' },
+							{
+								label: __( 'Element', 'scroll-to' ),
+								value: 'element',
+							},
+						] }
+						onChange={ ( value ) =>
+							setAttributes( { scrollTo: value } )
+						}
 					/>
-					{scrollTo === 'element' &&
+					{ scrollTo === 'element' && (
 						<TextControl
-							label={__('Target Element ID', 'scroll-to')}
-							value={elementId}
-							onChange={(value) => setAttributes({ elementId: value })}
-						/>}
+							label={ __( 'Target Element ID', 'scroll-to' ) }
+							value={ elementId }
+							onChange={ ( value ) =>
+								setAttributes( { elementId: value } )
+							}
+						/>
+					) }
 				</PanelBody>
 			</InspectorControls>
 

@@ -1,15 +1,15 @@
-const SvgComponent = ({ width = 48, height = 48, color }) => {
+const SvgComponent = ( { width = 48, height = 48, color } ) => {
 	let pathProps = {};
 
-	if (color) {
+	if ( color ) {
 		pathProps.fill = color;
 	}
 
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width={width}
-			height={height}
+			width={ width }
+			height={ height }
 			viewBox="0 0 512 512"
 		>
 			<path
