@@ -7,6 +7,11 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
 /**
+ * Internal dependencies
+ */
+import ScrollTopIcon from './scroll-top-icon';
+
+/**
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
  * editor into `post_content`.
@@ -16,9 +21,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save() {
+	const blockProps = useBlockProps.save();
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Scroll To – hello from the saved content!' }
-		</p>
+		<button { ...blockProps }>
+			<ScrollTopIcon { ...blockProps.style } />
+		</button>
 	);
 }

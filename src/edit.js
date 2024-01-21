@@ -49,11 +49,10 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { scrollTo, elementId } = attributes;
 
 	useEffect( () => {
-		setAttributes( {
-			scrollTo: scrollTo || 'top',
-			elementId: elementId || '',
-		} );
-	}, [ scrollTo, elementId ] );
+		if (scrollTo === 'top' && elementId !== '') {
+			setAttributes({ elementId : '' });
+		}
+	}, [ scrollTo ] );
 
 	return (
 		<>
@@ -61,6 +60,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				<PanelBody title={ __( 'Settings', 'scroll-to' ) }>
 					<RadioControl
 						label={ __( 'Scroll Target', 'scroll-to' ) }
+						help={ __( 'Choose to scroll either to a specific HTML element or to the top of the page.', 'scroll-to' ) }
 						selected={ scrollTo }
 						options={ [
 							{ label: __( 'Top', 'scroll-to' ), value: 'top' },

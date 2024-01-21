@@ -13,10 +13,12 @@
       "enum": [
         "top",
         "element"
-      ]
+      ],
+      "default": "top"
     },
     "elementId": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {
