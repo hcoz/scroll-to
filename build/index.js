@@ -86,15 +86,16 @@ function Edit({
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
   const {
     scrollTo,
-    elementId
+    elementSelector,
+    behavior
   } = attributes;
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.useEffect)(() => {
-    if (scrollTo === 'top' && elementId !== '') {
+    if (scrollTo === 'top' && elementSelector !== '') {
       setAttributes({
-        elementId: ''
+        elementSelector: ''
       });
     }
-  }, [scrollTo, elementId]);
+  }, [scrollTo, elementSelector]);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Settings', 'scroll-to')
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RadioControl, {
@@ -114,9 +115,23 @@ function Edit({
   }), scrollTo === 'element' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Target Element', 'scroll-to'),
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add the CSS selector of the target element to be scrolled into.', 'scroll-to'),
-    value: elementId,
+    value: elementSelector,
     onChange: value => setAttributes({
-      elementId: value
+      elementSelector: value
+    })
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RadioControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Scroll Behavior', 'scroll-to'),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Choose to scroll behavior type.', 'scroll-to'),
+    selected: behavior,
+    options: [{
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Smooth', 'scroll-to'),
+      value: 'smooth'
+    }, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Instant', 'scroll-to'),
+      value: 'instant'
+    }],
+    onChange: value => setAttributes({
+      behavior: value
     })
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     ...blockProps
@@ -364,7 +379,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/scroll-to","version":"0.1.0","title":"Scroll To","category":"widgets","description":"Gutenberg block of scroll to top or a specific HTML element.","example":{},"attributes":{"scrollTo":{"type":"string","enum":["top","element"],"default":"top"},"elementId":{"type":"string","default":""}},"supports":{"color":{"background":true},"html":false,"multiple":false},"textdomain":"scroll-to","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/scroll-to","version":"0.1.0","title":"Scroll To","category":"widgets","description":"Gutenberg block of scroll to top or a specific HTML element.","example":{},"attributes":{"scrollTo":{"type":"string","enum":["top","element"],"default":"top"},"elementSelector":{"type":"string","default":""},"behavior":{"type":"string","enum":["smooth","instant"],"default":"smooth"}},"supports":{"color":{},"html":false,"multiple":false},"textdomain":"scroll-to","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

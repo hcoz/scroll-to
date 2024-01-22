@@ -37,15 +37,17 @@ domReady( function () {
 	} );
 
 	scrollButton.addEventListener( 'click', () => {
+		const behavior = scrollButton.getAttribute( 'behavior' );
+
 		if ( scrollButton.getAttribute( 'scrollto' ) === 'top' ) {
 			window.scrollTo( {
 				top: 0,
-				behavior: 'smooth',
+				behavior: behavior,
 			} );
 		} else {
 			document
-				.querySelector( scrollButton.getAttribute( 'elementid' ) )
-				.scrollIntoView( { behavior: 'smooth' } );
+				.querySelector( scrollButton.getAttribute( 'elementselector' ) )
+				.scrollIntoView( { behavior: behavior } );
 		}
 	} );
 } );

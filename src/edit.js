@@ -54,13 +54,13 @@ import ScrollTopIcon from './scroll-top-icon';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
-	const { scrollTo, elementId } = attributes;
+	const { scrollTo, elementSelector, behavior } = attributes;
 
 	useEffect( () => {
-		if ( scrollTo === 'top' && elementId !== '' ) {
-			setAttributes( { elementId: '' } );
+		if ( scrollTo === 'top' && elementSelector !== '' ) {
+			setAttributes( { elementSelector: '' } );
 		}
-	}, [ scrollTo, elementId ] );
+	}, [ scrollTo, elementSelector ] );
 
 	return (
 		<>
@@ -91,12 +91,33 @@ export default function Edit( { attributes, setAttributes } ) {
 								'Add the CSS selector of the target element to be scrolled into.',
 								'scroll-to'
 							) }
-							value={ elementId }
+							value={ elementSelector }
 							onChange={ ( value ) =>
-								setAttributes( { elementId: value } )
+								setAttributes( { elementSelector: value } )
 							}
 						/>
 					) }
+					<RadioControl
+						label={ __( 'Scroll Behavior', 'scroll-to' ) }
+						help={ __(
+							'Choose to scroll behavior type.',
+							'scroll-to'
+						) }
+						selected={ behavior }
+						options={ [
+							{
+								label: __( 'Smooth', 'scroll-to' ),
+								value: 'smooth',
+							},
+							{
+								label: __( 'Instant', 'scroll-to' ),
+								value: 'instant',
+							},
+						] }
+						onChange={ ( value ) =>
+							setAttributes( { behavior: value } )
+						}
+					/>
 				</PanelBody>
 			</InspectorControls>
 

@@ -121,14 +121,15 @@ _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     scrollButton.style.display = docEl.scrollTop / scrollableHeight > GOLDEN_RATIO ? 'block' : 'none';
   });
   scrollButton.addEventListener('click', () => {
+    const behavior = scrollButton.getAttribute('behavior');
     if (scrollButton.getAttribute('scrollto') === 'top') {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: behavior
       });
     } else {
-      document.querySelector(scrollButton.getAttribute('elementid')).scrollIntoView({
-        behavior: 'smooth'
+      document.querySelector(scrollButton.getAttribute('elementselector')).scrollIntoView({
+        behavior: behavior
       });
     }
   });

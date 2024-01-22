@@ -16,15 +16,21 @@
       ],
       "default": "top"
     },
-    "elementId": {
+    "elementSelector": {
       "type": "string",
       "default": ""
+    },
+    "behavior": {
+      "type": "string",
+      "enum": [
+        "smooth",
+        "instant"
+      ],
+      "default": "smooth"
     }
   },
   "supports": {
-    "color": {
-      "background": true
-    },
+    "color": {},
     "html": false,
     "multiple": false
   },
