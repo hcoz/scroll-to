@@ -14,11 +14,12 @@ New block editor element for scroll to top or a sepecific element easily. Custom
 
 **Features**
 
-- Displays a button when user scrolls down the page.
-- Scrolls the page back to top with or without animation.
-- Link to an element within the page.
+- Displays a button when the user scrolls down the page.
+- Scroll with or without animation.
+- Scroll to the top or to a specific HTML element within the page.
 - Customizable button colors.
-- Auto hide.
+- Automatically hides at the top of the page.
+- Customizable height threshold to display the scroll button.
 
 == Installation ==
 
