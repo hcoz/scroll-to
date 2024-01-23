@@ -36,13 +36,9 @@ Then the \"Scroll To\" block will be available in Insert Block section of the pa
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How can I submit a question, problem or suggestion? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+You can reach out via turnamed23@gmail.com
 
 == Screenshots ==
 
