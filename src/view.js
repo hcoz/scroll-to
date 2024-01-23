@@ -24,16 +24,15 @@ import domReady from '@wordpress/dom-ready';
 
 domReady( function () {
 	const scrollButton = document.getElementById( 'hco-scroll-btn' );
+	const THRESHOLD =
+		( Number( scrollButton.getAttribute( 'threshold' ) ) || 35 ) / 100;
 
 	document.addEventListener( 'scroll', () => {
 		const docEl = document.documentElement;
 		const scrollableHeight = docEl.scrollHeight - docEl.clientHeight;
-		const GOLDEN_RATIO = 0.5;
 
 		scrollButton.style.display =
-			docEl.scrollTop / scrollableHeight > GOLDEN_RATIO
-				? 'block'
-				: 'none';
+			docEl.scrollTop / scrollableHeight > THRESHOLD ? 'block' : 'none';
 	} );
 
 	scrollButton.addEventListener( 'click', () => {

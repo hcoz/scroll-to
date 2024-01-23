@@ -7,7 +7,7 @@
  *
  * @return {Element} Svg icon element
  */
-export default function SvgComponent( { width = 48, height = 48, color } ) {
+export default function ScrollTopIcon( { width = 48, height = 48, color } ) {
 	const pathProps = {};
 
 	if ( color ) {

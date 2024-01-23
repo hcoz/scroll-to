@@ -21,8 +21,14 @@ import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
  * @see https://developer.wordpress.org/block-editor/reference-guides/components/panel/#panelbody
  * @see https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/
  * @see https://developer.wordpress.org/block-editor/reference-guides/components/text-control/
+ * @see https://developer.wordpress.org/block-editor/reference-guides/components/range-control/
  */
-import { PanelBody, RadioControl, TextControl } from '@wordpress/components';
+import {
+	PanelBody,
+	RadioControl,
+	TextControl,
+	RangeControl,
+} from '@wordpress/components';
 
 /**
  * Import neecessary React utilities
@@ -58,7 +64,7 @@ import ScrollTopIcon from './scroll-top-icon';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
-	const { scrollTo, elementSelector, behavior } = attributes;
+	const { scrollTo, elementSelector, behavior, threshold } = attributes;
 
 	useEffect( () => {
 		if ( scrollTo === 'top' && elementSelector !== '' ) {
@@ -121,6 +127,19 @@ export default function Edit( { attributes, setAttributes } ) {
 						onChange={ ( value ) =>
 							setAttributes( { behavior: value } )
 						}
+					/>
+					<RangeControl
+						label={ __( 'Scroll Threshold', 'scroll-to' ) }
+						help={ __(
+							'Specify the percentage of height at which the scroll button will be visible.',
+							'scroll-to'
+						) }
+						value={ threshold }
+						onChange={ ( value ) =>
+							setAttributes( { threshold: value } )
+						}
+						min={ 0 }
+						max={ 100 }
 					/>
 				</PanelBody>
 			</InspectorControls>

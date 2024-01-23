@@ -21,6 +21,10 @@
 			"type": "string",
 			"enum": [ "smooth", "instant" ],
 			"default": "smooth"
+		},
+		"threshold": {
+			"type": "number",
+			"default": 35
 		}
 	},
 	"supports": {
