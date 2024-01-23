@@ -1,7 +1,7 @@
 {
 	"name": "scroll-to",
-	"version": "0.1.0",
-	"description": "Gutenberg block of scroll to top or a specific HTML element.",
+	"version": "1.0.0",
+	"description": "Block element of scroll to top or a specific HTML element.",
 	"author": "hcoz",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

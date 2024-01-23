@@ -42,12 +42,12 @@ domReady( function () {
 		if ( scrollButton.getAttribute( 'scrollto' ) === 'top' ) {
 			window.scrollTo( {
 				top: 0,
-				behavior: behavior,
+				behavior,
 			} );
 		} else {
 			document
 				.querySelector( scrollButton.getAttribute( 'elementselector' ) )
-				.scrollIntoView( { behavior: behavior } );
+				.scrollIntoView( { behavior } );
 		}
 	} );
 } );

@@ -1,5 +1,14 @@
-const SvgComponent = ( { width = 48, height = 48, color } ) => {
-	let pathProps = {};
+/**
+ *
+ * @param {Object} param0 Svg icon properties
+ * @param {number} param0.width Svg width
+ * @param {number} param0.height Svg height
+ * @param {string} param0.color Svg color hex code
+ *
+ * @return {Element} Svg icon element
+ */
+export default function SvgComponent( { width = 48, height = 48, color } ) {
+	const pathProps = {};
 
 	if ( color ) {
 		pathProps.fill = color;
@@ -18,6 +27,4 @@ const SvgComponent = ( { width = 48, height = 48, color } ) => {
 			/>
 		</svg>
 	);
-};
-
-export default SvgComponent;
+}

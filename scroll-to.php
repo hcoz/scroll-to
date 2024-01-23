@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:       Scroll To
- * Description:       Gutenberg block of scroll to top or a specific HTML element.
+ * Description:       Block element of scroll to top or a specific HTML element.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           1.0.0
  * Author:            hcoz
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

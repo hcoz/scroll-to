@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "create-block/scroll-to",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"title": "Scroll To",
 	"category": "widgets",
-	"description": "Gutenberg block of scroll to top or a specific HTML element.",
+	"description": "Block element of scroll to top or a specific HTML element.",
 	"example": {},
 	"attributes": {
 		"scrollTo": {

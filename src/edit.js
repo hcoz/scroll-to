@@ -50,6 +50,10 @@ import ScrollTopIcon from './scroll-top-icon';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
+ * @param {Object} param0 WP params
+ * @param {Object} param0.attributes React state attributes
+ * @param {Function} param0.setAttributes Reat state update function
+ *
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
@@ -60,7 +64,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		if ( scrollTo === 'top' && elementSelector !== '' ) {
 			setAttributes( { elementSelector: '' } );
 		}
-	}, [ scrollTo, elementSelector ] );
+	}, [ setAttributes, scrollTo, elementSelector ] );
 
 	return (
 		<>

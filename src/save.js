@@ -18,6 +18,9 @@ import ScrollTopIcon from './scroll-top-icon';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
  *
+ * @param {Object} param0 WP params
+ * @param {Object} param0.attributes React state attributes
+ *
  * @return {Element} Element to render.
  */
 export default function save( { attributes } ) {

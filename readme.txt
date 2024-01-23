@@ -1,28 +1,36 @@
 === Scroll To ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.1
-Stable tag:        0.1.0
+Contributors:      hcoz
+Tags:              block, block-editor, back to top, scroll to top, scroll to, scroll to HTML element
+Tested up to:      6.4.2
+Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Gutenberg block of scroll to top or a specific HTML element.
+Block element of scroll to top or a specific HTML element.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+New block editor element for scroll to top or a sepecific element easily. Customizable features are scroll mode (instant or smooth), scroll to target (top or specific HTML element), button and icon colors.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Features**
+
+- Displays a button when user scrolls down the page.
+- Scrolls the page back to top with or without animation.
+- Link to an element within the page.
+- Customizable button colors.
+- Auto hide.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+1. Click Plugins/Add New from the WordPress admin panel.
+2. Search for “Scroll To” and install.
 
-e.g.
+-- or --
 
-1. Upload the plugin files to the `/wp-content/plugins/scroll-to` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+1. Upload the plugin files to the `/wp-content/plugins/scroll-to` directory,
+2. Activate the plugin through the \'Plugins\' screen in WordPress
+
+Then the \"Scroll To\" block will be available in Insert Block section of the page editor. 
 
 
 == Frequently Asked Questions ==
@@ -37,19 +45,9 @@ Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Block element
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 * Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
