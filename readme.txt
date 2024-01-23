@@ -38,7 +38,7 @@ Then the \"Scroll To\" block will be available in Insert Block section of the pa
 
 = How can I submit a question, problem or suggestion? =
 
-You can reach out via turnamed23@gmail.com
+Any contribution is more than welcome! Here is the code repo https://github.com/hcoz/scroll-to
 
 == Screenshots ==
 
