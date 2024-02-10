@@ -33,12 +33,12 @@ New block editor element for scroll to top or a sepecific element easily. Custom
 
 Then the \"Scroll To\" block will be available in Insert Block section of the page editor. 
 
-
 == Frequently Asked Questions ==
 
 = How can I submit a question, problem or suggestion? =
 
-Any contribution is more than welcome! Here is the code repo https://github.com/hcoz/scroll-to
+Any contribution is more than welcome! Feel free to create an issue for any kind of feedback.
+Here is the code repo https://github.com/hcoz/scroll-to
 
 == Screenshots ==
 
