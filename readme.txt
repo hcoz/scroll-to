@@ -1,7 +1,9 @@
 === Scroll To ===
 Contributors:      hcoz
-Tags:              block, block-editor, back to top, scroll to top, scroll to, scroll to HTML element
+Tags:              block, block-editor, back to top, scroll to top, scroll to HTML element
 Tested up to:      6.4.2
+Requires at least: 5.0
+Requires PHP:	   7.3
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
