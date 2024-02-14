@@ -26,14 +26,14 @@ New block editor element for scroll to top or a sepecific element easily. Custom
 == Installation ==
 
 1. Click Plugins/Add New from the WordPress admin panel.
-2. Search for “Scroll To” and install.
+2. Search for "Scroll To" and install.
 
 -- or --
 
 1. Upload the plugin files to the `/wp-content/plugins/scroll-to` directory,
-2. Activate the plugin through the \'Plugins\' screen in WordPress
+2. Activate the plugin through the "Plugins" screen in WordPress
 
-Then the \"Scroll To\" block will be available in Insert Block section of the page editor. 
+Then the "Scroll To" block will be available in Insert Block section of the page editor.
 
 == Frequently Asked Questions ==
 
