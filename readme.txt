@@ -1,6 +1,6 @@
 === Scroll To ===
 Contributors:      hcoz
-Tags:              block, block-editor, back to top, scroll to top, scroll to HTML element
+Tags:              block-editor, gutenberg, scroll to top, scroll to HTML element
 Tested up to:      6.4.2
 Requires at least: 5.0
 Requires PHP:	   7.3
@@ -40,7 +40,7 @@ Then the "Scroll To" block will be available in Insert Block section of the page
 = How can I submit a question, problem or suggestion? =
 
 Any contribution is more than welcome! Feel free to create an issue for any kind of feedback.
-Here is the code repo https://github.com/hcoz/scroll-to
+Here is the code repo [https://github.com/hcoz/scroll-to](https://github.com/hcoz/scroll-to)
 
 == Screenshots ==
 
