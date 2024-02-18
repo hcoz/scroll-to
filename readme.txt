@@ -4,7 +4,7 @@ Tags:              block-editor, gutenberg, scroll to top, scroll to HTML elemen
 Tested up to:      6.4.2
 Requires at least: 5.0
 Requires PHP:	   7.3
-Stable tag:        1.0.1
+Stable tag:        1.0.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ Here is the code repo [https://github.com/hcoz/scroll-to](https://github.com/hco
 1. Block element
 
 == Changelog ==
+
+= 1.0.2 =
+* Minor fixes
 
 = 1.0.1 =
 * Assets update
